@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   homeTitle = 'Welcome to Angular 2';
+  myValue = "I Love Cheeze";
+  trueOrFalse = true;
   constructor() { }
 
   ngOnInit() {

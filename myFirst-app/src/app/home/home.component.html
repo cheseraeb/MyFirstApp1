@@ -2,3 +2,11 @@
   {{homeTitle}}
 </p>
 <ng-content></ng-content>
+
+<!-- Property binding -->
+<!-- Below value is the property. by placing the [] around it
+I can now bind any variable declared in there and the app will pick it up
+and place it there-->
+<input [value]="myValue">
+<!-- By placing the {{}} around the value, it will also bind it to the property -->
+<input required = "{{trueOrFalse}}">
