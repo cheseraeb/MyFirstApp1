@@ -10,8 +10,8 @@ import {
 })
 export class HomeComponent implements OnInit {
   homeTitle = 'Welcome to Angular 2';
-  // myValue = 'I Love Cheeze';
-  // trueOrFalse = true;
+  myValue = 'I Love Cheeze';
+  trueOrFalse = true;
 
 // Two way property binding
 inputarray1 = {
