@@ -1,7 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header style="text-align:center">
   <h1>
-    Welcome to {{ title }} !!! Angular 2
+    Welcome to {{ title }} !!! Angular 2 <br>
+    this is the app component
+
   </h1>
   <nav style="text-align: left">
     <ul>
@@ -13,5 +15,6 @@
   </nav>
 </header>
 <section id="main">
-  <app-home>this is the home directive</app-home>
+  <hr>
+  <app-home [cheeze]="inputarray2" (onYell)="yell($event)">this is the home directive</app-home>
 </section>

@@ -1,6 +1,9 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  Input,
+  Output,
+  EventEmitter
 } from '@angular/core';
 
 @Component({
@@ -12,7 +15,10 @@ export class HomeComponent implements OnInit {
   homeTitle = 'Welcome to Angular 2';
   myValue = 'I Love Cheeze';
   trueOrFalse = true;
-
+// Input
+  @Input() cheeze;
+//output
+  @Output() onYell = new EventEmitter();
 // Two way property binding
 inputarray1 = {
   name: 'BIG',
@@ -23,7 +29,11 @@ inputarray1 = {
 alertme(text) {
     alert(text);
   }
+  fireYellEvent(e){
+    this.onYell.emit(e);
+  }
  constructor() {}
+
   ngOnInit() {}
 
 }

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cheeze APP Angular 2';
+  inputarray2 = {
+    name: 'Cheeze',
+    surname: 'BIG'
+
+  };
+
+  yell(e) {
+    alert('WHAT THE HELL!!!!!');
+  }
+
 }

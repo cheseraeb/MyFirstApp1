@@ -1,3 +1,4 @@
+<h1>home component</h1>
 <p>
   {{homeTitle}}
 </p>
@@ -13,12 +14,21 @@ and place it there-->
 <br>
 <input [(ngModel)]="inputarray1.comments" placeholder="comments">
 <br>
-<p>{{inputarray1.name}}</p>
+<!-- Two way property binding -->
+<label>Name:
+  <p>{{inputarray1.name}}</p>
+</label>
+<label>Surname:</label>
 <p>{{inputarray1.surname}}</p>
-<p>{{inputarray1.comments}}</p>
+<label>Comments:</label>
+<p id="comments">{{inputarray1.comments}}</p>
 <a href="https://www.youtube.com/watch?v=uh5ZKGEEAkY" target="_blank">
   <button>Continue angular</button>
 </a>
 <br>
 <button (click)="alertme('I love you cheeze!!!!')">Click me</button>
-<!-- Two way property binding -->
+<!-- input -->
+<p>{{cheeze.name}}</p>
+<p>{{cheeze.surname}}</p>
+<!-- output -->
+<button (click)="fireYellEvent($event)">Hit Me</button>
