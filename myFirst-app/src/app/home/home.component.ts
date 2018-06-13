@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   homeTitle = 'Welcome to Angular 2';
-  myValue = "I Love Cheeze";
-  trueOrFalse = true;
-  constructor() { }
+  // myValue = 'I Love Cheeze';
+  // trueOrFalse = true;
 
-  ngOnInit() {
+// Two way property binding
+inputarray1 = {
+  name: 'BIG',
+  surname: 'CHEEZE',
+  comments: ''
+};
+// event binding
+alertme(text) {
+    alert(text);
   }
+ constructor() {}
+  ngOnInit() {}
 
 }
