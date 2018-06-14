@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { DirectoryComponent } from './directory/directory.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { HomeComponent } from './home/home.component';
   ],
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DirectoryComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
