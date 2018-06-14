@@ -16,5 +16,7 @@
 </header>
 <section id="main">
   <hr>
-  <app-home [cheeze]="inputarray2" (onYell)="yell($event)">this is the home directive</app-home>
+  <!-- <app-home [cheeze]="inputarray2" (onYell)="yell($event)">this is the home directive</app-home> -->
+  <!-- to dynamically route to the directories, the below tag is needed -->
+  <router-outlet></router-outlet>
 </section>
