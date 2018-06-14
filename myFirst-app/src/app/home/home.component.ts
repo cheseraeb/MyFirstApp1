@@ -20,18 +20,21 @@ export class HomeComponent implements OnInit {
 // output
   // tslint:disable-next-line:no-output-on-prefix
   @Output() onYell = new EventEmitter();
+
 // Two way property binding
-inputarray1 = {
+
+  inputarray1 = {
   name: 'BIG',
   surname: 'CHEEZE',
   comments: ''
 };
 // event binding
+fireYellEvent(e) {
+  this.onYell.emit(e);
+}
+
 alertme(text) {
     alert(text);
-  }
-  fireYellEvent(e) {
-    this.onYell.emit(e);
   }
  constructor() {}
 
