@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   trueOrFalse = true;
 // Input
   @Input() cheeze;
-//output
+// output
+  // tslint:disable-next-line:no-output-on-prefix
   @Output() onYell = new EventEmitter();
 // Two way property binding
 inputarray1 = {
@@ -29,7 +30,7 @@ inputarray1 = {
 alertme(text) {
     alert(text);
   }
-  fireYellEvent(e){
+  fireYellEvent(e) {
     this.onYell.emit(e);
   }
  constructor() {}
