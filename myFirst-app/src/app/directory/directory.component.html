@@ -1,13 +1,41 @@
-<p [ngClass]="classes" >
+<p [ngClass]="classes">
   directory works!
 </p>
-<a [routerLink]="['/directory/cheeze1']"><button>Check out Cheeze</button></a>
+<a [routerLink]="['/directory/cheeze1']">
+  <button>Check out Cheeze</button>
+</a>
 <p>{{cheeze1}}</p>
 
-<p *ngIf="test" >Only show if test is true</p>
+<p *ngIf="test">Only show if test is true</p>
 
 <style>
-  .blue{color:blue}
-  .red{color: red}
-  .underline{text-decoration: underline}
+  .blue {
+    color: blue
+  }
+
+  .red {
+    color: red
+  }
+
+  .underline {
+    text-decoration: underline
+  }
 </style>
+
+<h2>Cheeze friends listing</h2>
+<form id="filter">
+  <label>Filter Friends list</label>
+  <input [(ngModel)]="term" type="text">
+</form>
+
+<ul id="cheeze-friends">
+  <li *ngFor="let friend of friends">
+    <div class="single-friend">
+      <h3>{{friend.name | uppercase}} AKA {{friend.name | uppercase | slice:0:1}} </h3>
+      <span [ngStyle]="{background: friend.catagory}">{{friend.catagory}} Catagory </span><br>
+      <span>Class: {{friend.class | slice:1}}</span>
+      <hr>
+      <!-- <div (click)="remove($event)" [attr.data-name]="friend.name">DELETE</div> -->
+    </div>
+  </li>
+</ul>

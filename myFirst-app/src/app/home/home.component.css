@@ -7,10 +7,6 @@ input{
   display: block;
   margin: 0 auto;
 }
-label{
-  display: block;
-  margin: 0 auto;
-}
 #comments{
   display: block;
   border: 1px solid black;
