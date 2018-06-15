@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DirectoryComponent implements OnInit {
   cheeze1: string;
+  classes = {'blue': true, 'red': false, 'underline': true};
+  test = true;
   constructor(private route: ActivatedRoute) {
       this.cheeze1 = route.snapshot.params['cheeze1'];
    }
