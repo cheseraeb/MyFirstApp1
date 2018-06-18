@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { appRoutes } from './app.routes';
 import { FilterPipe } from './filter.pipe';
+// import { LoggingService } from './logging.service';
+
 
 @NgModule({
   imports: [
@@ -22,6 +24,7 @@ import { FilterPipe } from './filter.pipe';
     HomeComponent,
     DirectoryComponent,
     FilterPipe,
+    // LoggingService
   ],
   providers: [],
   bootstrap: [AppComponent]

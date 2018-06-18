@@ -1,11 +1,14 @@
 
 import { Component, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoggingService } from '../logging.service';
+
 // import { FilterPipe } from '../filter.pipe';
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
+  providers: [LoggingService],
   // Pipe: [FilterPipe]
 })
 export class DirectoryComponent implements OnInit {
@@ -23,9 +26,21 @@ export class DirectoryComponent implements OnInit {
     {name : 'Vince', catagory: 'blue', class: '2'}
   ];
   term = '';
-  constructor(private route: ActivatedRoute) {
-      this.cheeze1 = route.snapshot.params['cheeze1'];
-   }
+
+
+  // constructor(private route: ActivatedRoute) {
+  //     this.cheeze1 = route.snapshot.params['cheeze1'];
+  //   } // (private logger: LoggingService) {
+  //     logit(){
+  //       this.logger.log();
+  //     }
+  //  };
+  constructor(private logger: LoggingService, route: ActivatedRoute) {
+    this.cheeze1 = route.snapshot.params['cheeze1'];
+  }
+  logit() {
+    this.logger.log();
+  }
 
   ngOnInit() {
   }
