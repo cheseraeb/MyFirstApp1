@@ -7,10 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor(private http: HttpClient) { }
-
-  fetchdata() {
-    return this.http.get('/public/friends.json').subscribe(
-      (data) => console.log(data)
-    );
+  Url = 'assets/friends.json';
+  fetchData() {
+    return this.http.get(this.Url);
   }
 }

@@ -1,8 +1,9 @@
 
 import { Component, OnInit, Pipe } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Data } from '@angular/router';
 import { LoggingService } from '../logging.service';
-import { DataService } from '../data.service';
+import { DataService } from '../directory/data.service';
+import { Config } from 'protractor';
 
 // import { FilterPipe } from '../filter.pipe';
 @Component({
@@ -20,8 +21,7 @@ export class DirectoryComponent implements OnInit {
 
   ];
   term = '';
-
-
+  // data = [];
   // constructor(private route: ActivatedRoute) {
   //     this.cheeze1 = route.snapshot.params['cheeze1'];
   //   } // (private logger: LoggingService) {
@@ -35,9 +35,15 @@ export class DirectoryComponent implements OnInit {
   logit() {
     this.logger.log();
   }
-
-  ngOnInit() {
-    this.dataservice.fetchdata();
+  showConfig() {
+    this.dataservice.fetchData()
+    .subscribe((data) => console.log(data));
   }
+  ngOnInit() {
+    this.showConfig();
+    // this.dataservice.fetchdata().subscribe(
+    //   (data) => console.log(data)
+    // );
 
+    }
 }
