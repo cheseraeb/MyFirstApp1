@@ -12,6 +12,12 @@ import {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  inputarray1 = {
+    name: 'BIG',
+    surname: 'CHEEZE',
+    comments: 'here goes comment',
+  };
+
   homeTitle = 'Welcome to Angular 2';
   myValue = 'I Love Cheeze';
   trueOrFalse = true;
@@ -23,11 +29,6 @@ export class HomeComponent implements OnInit {
 
 // Two way property binding
 
-  inputarray1 = {
-  name: 'BIG',
-  surname: 'CHEEZE',
-  comments: ''
-};
 // event binding
 fireYellEvent(e) {
   this.onYell.emit(e);

@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+// import { FilterPipe } from '../filter.pipe';
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css']
+  styleUrls: ['./directory.component.css'],
+  // Pipe: [FilterPipe]
 })
 export class DirectoryComponent implements OnInit {
   cheeze1: string;
   classes = {'blue': true, 'red': false, 'underline': true};
-  test = true;
+  test = false;
   friends = [
     {name : 'Carika', catagory: 'green', class: '1'},
     {name : 'Duane', catagory: 'yellow', class: '3'},
@@ -19,6 +22,7 @@ export class DirectoryComponent implements OnInit {
     {name : 'Shane', catagory: 'green', class: '1'},
     {name : 'Vince', catagory: 'blue', class: '2'}
   ];
+  term = '';
   constructor(private route: ActivatedRoute) {
       this.cheeze1 = route.snapshot.params['cheeze1'];
    }

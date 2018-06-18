@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(friends: any, term: any): any {
+    // check if search term is undefined
+    if (term === undefined) {return friends; }
+    // Return updated friends list
+    return friends.filter(function(friend) {
+      return friend.name.toLowerCase().includes(term.toLowerCase())  ;
+    });
+
   }
 
 }

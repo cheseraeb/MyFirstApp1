@@ -4,31 +4,23 @@
 </p>
 <ng-content></ng-content>
 
-<!-- Property binding -->
-<!-- Below value is the property. by placing the [] around it
-I can now bind any variable declared in there and the app will pick it up
-and place it there-->
 <input [value]="myValue">
-<!-- By placing the {{}} around the value, it will also bind it to the property -->
 <input required="{{trueOrFalse}}"><br>
 <br>
-<input [(ngModel)]="inputarray1.comments" placeholder="comments">
+<input [(ngModel)]="inputarray1.comments">
 <br>
-<!-- Two way property binding -->
 <label>Name:
-  <p>{{inputarray1.name}}</p>
+{{inputarray1.name}} <br>
 </label>
 <label>Surname:</label>
-<p>{{inputarray1.surname}}</p>
+{{inputarray1.surname}} <br>
 <label>Comments:</label>
-<p>{{inputarray1.comments}}</p>
+{{inputarray1.comments}} <br>
 <a href="https://www.youtube.com/watch?v=sVTNaYBVP88" target="_blank">
   <button>Continue angular</button>
 </a>
 <br>
 <button (click)="alertme('I love you cheeze!!!!')">Click me</button>
-<!-- input -->
-<p>{{cheeze.name}}</p>
-<p>{{cheeze.surname}}</p>
-<!-- output -->
+{{cheeze.name}} <br>
+{{cheeze.surname}} <br>
 <button (click)="fireYellEvent($event)">Hit Me</button>
