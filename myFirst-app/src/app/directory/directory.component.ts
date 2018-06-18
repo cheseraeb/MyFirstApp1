@@ -2,13 +2,14 @@
 import { Component, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LoggingService } from '../logging.service';
+import { DataService } from '../data.service';
 
 // import { FilterPipe } from '../filter.pipe';
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
-  providers: [LoggingService],
+  providers: [LoggingService, DataService],
   // Pipe: [FilterPipe]
 })
 export class DirectoryComponent implements OnInit {
@@ -16,14 +17,7 @@ export class DirectoryComponent implements OnInit {
   classes = {'blue': true, 'red': false, 'underline': true};
   test = false;
   friends = [
-    {name : 'Carika', catagory: 'green', class: '1'},
-    {name : 'Duane', catagory: 'yellow', class: '3'},
-    {name : 'Francois', catagory: 'blue', class: '2'},
-    {name : 'Grant', catagory: 'green', class: '1'},
-    {name : 'Rea', catagory: 'orange', class: '4'},
-    {name : 'Dean', catagory: 'yellow', class: '3'},
-    {name : 'Shane', catagory: 'green', class: '1'},
-    {name : 'Vince', catagory: 'blue', class: '2'}
+
   ];
   term = '';
 
@@ -35,7 +29,7 @@ export class DirectoryComponent implements OnInit {
   //       this.logger.log();
   //     }
   //  };
-  constructor(private logger: LoggingService, route: ActivatedRoute) {
+  constructor(private logger: LoggingService, private route: ActivatedRoute, private dataservice: DataService) {
     this.cheeze1 = route.snapshot.params['cheeze1'];
   }
   logit() {
@@ -43,6 +37,7 @@ export class DirectoryComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dataservice.fetchdata();
   }
 
 }

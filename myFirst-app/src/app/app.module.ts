@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { appRoutes } from './app.routes';
 import { FilterPipe } from './filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
+
 // import { LoggingService } from './logging.service';
 
 
@@ -17,13 +19,14 @@ import { FilterPipe } from './filter.pipe';
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
-    )
+    ),
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
     HomeComponent,
     DirectoryComponent,
-    FilterPipe,
+    FilterPipe
     // LoggingService
   ],
   providers: [],
