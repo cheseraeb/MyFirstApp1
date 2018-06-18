@@ -1,4 +1,4 @@
-<h1>home component</h1>
+<h1 (onYell)="yell($event)">Home component</h1>
 <p>
   {{homeTitle}}
 </p>
@@ -20,7 +20,9 @@
   <button>Continue angular</button>
 </a>
 <br>
-<button (click)="alertme('I love you cheeze!!!!')">Click me</button>
-{{cheeze.name}} <br>
-{{cheeze.surname}} <br>
-<button (click)="fireYellEvent($event)">Hit Me</button>
+<button (click)="alertme('I love you cheeze!!!!')">Click me</button> <br>
+<!-- {{cheeze.name}} <br>
+{{cheeze.surname}} <br> -->
+<!-- <button (click)="fireYellEvent($event)">Hit Me</button> -->
+<button (click)="yell($event)">Hit Me</button>
+

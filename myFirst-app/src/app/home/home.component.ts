@@ -34,6 +34,10 @@ fireYellEvent(e) {
   this.onYell.emit(e);
 }
 
+yell(e) {
+  alert('WHAT THE HELL!!!!!');
+}
+
 alertme(text) {
     alert(text);
   }
