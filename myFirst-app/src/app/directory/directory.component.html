@@ -4,6 +4,8 @@
 <a [routerLink]="['/directory/cheeze1']">
   <button>Check out Cheeze</button>
 </a>
+<script>
+</script>
 <p>{{cheeze1}}</p>
 
 <p *ngIf="test">Only show if test is true</p>
@@ -25,16 +27,21 @@
 <h2>Cheeze friends listing</h2>
 <form id="filter">
   <label>Filter Friends list</label>
-  <!-- n angular 6, custom pipes like below must have [ngModelOptions]="{standalone: true}"
-  and has to be declared in app module-->
   <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}">
+</form>
+<form id="add-friend">
+  <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="FriendName">
+  <input type="text" [(ngModel)]="catagory" [ngModelOptions]="{standalone: true}" placeholder="Catagory">
+  <input type="text" [(ngModel)]="class1" [ngModelOptions]="{standalone: true}" placeholder="Class">
+  <button (click)="fbPostData(name, catagory, class1)">Add friend</button>
 </form>
 
 <ul id="cheeze-friends">
   <li *ngFor="let friend of friends | filter:term">
     <div class="single-friend">
       <h3>{{friend.name | uppercase }} AKA {{friend.name | uppercase | slice:0:1}} </h3>
-      <span [ngStyle]="{background: friend.catagory}">{{friend.catagory}} Catagory </span><br>
+      <span [ngStyle]="{background: friend.catagory}">{{friend.catagory}} Catagory </span>
+      <br>
       <span>Class: {{friend.class | slice:1}}</span>
       <hr>
       <!-- <div (click)="remove($event)" [attr.data-name]="friend.name">DELETE</div> -->

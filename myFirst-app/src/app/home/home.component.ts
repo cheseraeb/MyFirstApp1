@@ -5,6 +5,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
+import { DirectoryComponent } from '../directory/directory.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,6 @@ export class HomeComponent implements OnInit {
     surname: 'CHEEZE',
     comments: 'here goes comment',
   };
-
   homeTitle = 'Welcome to Angular 2';
   myValue = 'I Love Cheeze';
   trueOrFalse = true;
@@ -44,6 +44,7 @@ alertme(text) {
   }
  constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

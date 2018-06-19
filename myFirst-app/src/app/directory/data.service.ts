@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor(private http: HttpClient) { }
-  Url = 'assets/friends.json';
+  Url = 'https://myfirst-204810.firebaseio.com/.json';
   fetchData() {
     return this.http.get(this.Url);
   }
